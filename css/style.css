@@ -1,0 +1,102 @@
+header{
+    margin-top: 
+        71px;
+}
+
+
+.couleur{
+    background-color: rgba(217, 217, 217,.8);
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.casen{
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+.logo{
+    font-size: 36px;
+    font-family: 'DM Serif Display', serif;
+    color: #EE374A;
+}
+.hover-underline-animation {
+    position: relative;
+    color: #EE374A;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #EE374A;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.telephone{
+    color: #000;
+}
+.loupe{
+    color: #000;
+}
+.panier{
+    color: #000;
+}
+.imageslider1{
+    filter: blur(2px);
+}
+.localisation{
+    position: absolute;
+}
+h5{
+
+    font-family: 'DM Serif Display', serif;
+    text-align: center;
+    color: #EE374A;
+}
+label{
+    display: none;
+}
+
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1
+}
+
+
+
+@media screen and (max-width:576px){
+    
+    
+}
+@media screen and (max-width:991px){
+    h5{
+        font-size: 20px;
+    }
+    .container{
+        width: 98%;
+    }
+    
+}
+@media screen and (max-width:1200px){
+    .container{
+        width: 960px;
+    }
+    
+}
+
+
