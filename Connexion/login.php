@@ -1,20 +1,35 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
-</head>
-<body>
-    <?php
-    $email = $_GET['email'] ?? "";
-    ?>
-    <form method="POST" action="login_process.php" >
-        <label for="">Email</label>
-        <input type="email" placeholder="Entre votre email" id="email" name="email" required>
-        <label for="">Mot de passe</label>
-        <input type="password" placeholder="Entre votre mot de passe" id="password" name="password" required>
-        <input type="submit" value="Se connecter" name="ok">
-    </form>
-</body>
-</html>
+<?php 
+
+require_once __DIR__ ."/../layout/header.php";
+require_once __DIR__ ."/../layout/navbar.php";
+?>
+<div class="row mt-5 pt-5">
+  <h1 class="text-center mt-5">Connexion</h1>
+  <div class="col-3 "></div>
+<form method="POST" action="connexion/login_process.php" class="col-6 ">
+  <div class="mb-3 mt-4 pt-4" >
+    
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" required>
+    <div id="emailHelp" class="form-text">Ne partagez jamais vos identifiants de connexion. À la place, vous pouvez partager des Biobons !</div>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label" >Mot de passe</label>
+    <input type="password" class="form-control" id="password"  name="password" required>
+  </div>
+  <div>
+    <?php 
+      if (isset($_SESSION['error_msg'])) { ?>
+            <div class="p-4 bg-red-200 text-red-700">
+                <?php echo $_SESSION['error_msg']; 
+                ?>
+            </div>
+        <?php
+            unset($_SESSION['error_msg']);
+        } 
+        ?>
+  </div>
+  <button type="submit" class="btn btn-primary">Se connecter</button>
+</form>
+<div class="col-3"></div>
+</div>

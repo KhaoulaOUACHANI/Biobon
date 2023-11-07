@@ -1,6 +1,11 @@
+<?php session_start(); 
+require_once __DIR__ . "/navbar.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr"> 
     <head>
+        <base href="/Biobon/"/>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Biobon</title>
@@ -18,3 +23,6 @@
         <link rel="stylesheet" href="css/style.css">
         <script src="js/main.js"></script>
     </head>
+
+    <body>
+        

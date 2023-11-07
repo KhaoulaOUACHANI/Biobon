@@ -1,46 +1,47 @@
-<?php require_once __DIR__ ."/layout/header.php";?>
+<?php 
+    require_once __DIR__ ."/layout/header.php";
+    require_once __DIR__ . '/function/getConnection.php';
 
-    <body>
+    $pdo = getConnection();?>
 
+
+        
+    <div class="image">
         <header> 
-            <?php require_once __DIR__ ."/layout/navbar.php";?>
+        
+        <?php require_once __DIR__ . "/layout/navbar.php"; ?>
+        
         </header>
 
         <main>
-                <!-- Carousel -->
-            <div id="carouselCaptions" class="carousel slide mb-3 position-relative" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active ">
-                        <img src="img/slider1_biobon.png" class="d-block w-100 imageslider1" alt="...">
-
+        
+        <section class="mt-5 pt-5">
+            <!-- LE NOM DE MA SECTION EN COMMENTAIRE -->
+            <div class="container justify-content-center"> <!-- container si je touche pas les bords pas de container si je touche les bords)-->
+                
+                <div class="row "> <!-- ça aligne -->
+                    <div class="col-lg-4 "> <!-- On copie ça le nombre de fois ou on a besoin -->
+                        <div class=" mb-3 ">
+                            <img src="img/image_gauche.png"  class="img-fluid " alt="">
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="img/slider2_biobon.png" class="d-block w-100" alt="...">
-                        
+                    <div class="col-lg-4"> <!-- On copie ça le nombre de fois ou on a besoin -->
+                        <div class=" mb-3">
+                            <img src="img/Image_centre.png"  class="img-fluid" alt="">
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="img/Slider3_bonbon.png" class="d-block w-100" alt="...">
-                    
-                    </div>
-                </div>
-                <div class="position-absolute top-50 start-50 translate-middle container newsletter">
-                    <div class=" couleur">
-                        <h5 class="fs-1"> Rejoignez notre communauté sucrée et soyez au cœur de la gourmandise !</h5>
-                        <div class="mb-3 mt-5 casen">
-                            <label for="text" class="form-label" >Newsletter</label>
-                            <input class="w-50 p-1" type="text" class="form-control" id="exampleInputEmail1" placeholder="Email" aria-describedby="emailHelp">
-                            <button type="button" class="btn btn-danger mt-3">Je m'inscris</button>
+                    <div class="col-lg-4"> <!-- On copie ça le nombre de fois ou on a besoin -->
+                        <div class=" mb-3">
+                            <img src="img/Image_droite.png"  class="img-fluid" alt="">
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>    
+        </section>
+    </div>
+        
 
-
+            
             <section>
                 <div class="container  mt-5">
 
@@ -48,13 +49,13 @@
 
                         <div class="col-lg-6"> 
                             <div class="mb-3">
-                                <img src="img/Image-couple.png" width="636px" alt="">
+                                <img src="img/Image-couple.png" width="636px" class="img-fluid" alt="">
                             </div>
                         </div>
-                        <div class="col-lg-6"> 
+                        <div class="col-lg-6 border "> 
                             <div class="border ">
                                 <h2>Qui sommes nous ?</h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, reprehenderit consectetur asperiores reiciendis doloribus odit! Modi, doloremque! Fugiat quia facilis fugit rem recusandae, quasi nulla, enim voluptate, eum iste et.</p>
+                                <p>Bienvenue chez Biobon, où la douceur rencontre la durabilité. Nous sommes Ana et Alex, un couple passionné qui a créé Biobon pour offrir des bonbons bio délicieux, exempts d'ingrédients artificiels, tout en préservant notre planète. Chez Biobon, nous sommes déterminés à vous proposer des douceurs savoureuses et éthiques, fabriquées à partir d'ingrédients biologiques et emballées de manière respectueuse de l'environnement. Rejoignez-nous pour une expérience sucrée qui fait du bien à votre palais et à la Terre.</p>
                             </div>
                             
                         </div>
@@ -94,6 +95,4 @@
 
         </main>
 
-    
-    </body>
-</html>
+<?php require_once __DIR__ . "/layout/footer.php"?>
