@@ -1,7 +1,7 @@
 <?php 
 
 require_once __DIR__ ."/../layout/header.php";
-require_once __DIR__ ."/../layout/navbar.php";
+
 ?>
 <div class="row mt-5 pt-5">
   <h1 class="text-center mt-5">Connexion</h1>
@@ -10,12 +10,12 @@ require_once __DIR__ ."/../layout/navbar.php";
   <div class="mb-3 mt-4 pt-4" >
     
     <label for="email" class="form-label">Email</label>
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" required>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" placeholder="Entrez votre email" required>
     <div id="emailHelp" class="form-text">Ne partagez jamais vos identifiants de connexion. À la place, vous pouvez partager des Biobons !</div>
   </div>
   <div class="mb-3">
     <label for="password" class="form-label" >Mot de passe</label>
-    <input type="password" class="form-control" id="password"  name="password" required>
+    <input type="password" class="form-control" id="password"  name="password" placeholder="Entrez votre mot de passe" required>
   </div>
   <div>
     <?php 

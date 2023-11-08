@@ -6,4 +6,5 @@ class MailsError
     public const PASSWORD_ERROR = 2;
     public const INVALID_CREDENTIALS   = 3;
     public const USER_NOT_FOUND = 4;
+    public const EMPTY = 5;
 }

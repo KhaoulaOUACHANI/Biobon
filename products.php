@@ -7,9 +7,9 @@ $products = getAllProducts();
 ?>
 
 
-<h1 class="mt-5 pt-5 mb-4 text-center ">Nos produits</h1>
-<div class="container">
-    <div class="row mt-5 pt-5">
+    <h1 class="mt-5 pt-5 mb-4 text-center ">Nos produits</h1>
+    <div class="container">
+        <div class="row mt-5 pt-5">
 
             <?php foreach ($products as $product) {
             ?>
@@ -21,8 +21,9 @@ $products = getAllProducts();
             <?php
             } ?>   
 
+        </div>
     </div>
-</div>
+
 
 <?php
 require_once 'layout/footer.php'; 

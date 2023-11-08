@@ -2,37 +2,13 @@
 require_once 'layout/header.php'; 
 require_once 'functions.php';
 require_once 'function/getProduictById.php';
-
-if (!isset($_GET['id'])) {
-    http_response_code(404);
-    echo "Produit non trouvé";
-    exit;
-}
-
-['id' => $id] = $_GET;
-
-if (!is_numeric($id)) {
-    http_response_code(404);
-    echo "Produit non trouvé";
-    exit;
-}
-
-$id = intval($id);
-
-$product = getProductById($id);
-
-if (!$product) {
-    http_response_code(404);
-    echo "Produit non trouvé";
-    exit;
-}
-
-$produitbyId = getProductById($id);
+require_once 'product_details_back.php'
 ?>
+
 <div class='pt-5 mt-5'> 
-    <div class="container card mb-3 mt-5 pt-5" style="max-width: 700px;">
-  <div class="row g-0">
-    <div class="col-md-4">
+    <div class="container card mb-3 mt-5 pt-5 h-auto vw-100 pb-5">
+        <div class="row g-0">
+            <div class="col-md-4 mt-5">
                 <img src="<?php echo $produitbyId['image_produit']?>" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
@@ -42,10 +18,10 @@ $produitbyId = getProductById($id);
                     <p class="card-text"><small class="text-body-secondary"><?php echo $produitbyId['prix']?></small></p>
                     <button type="button" class="btn btn-outline-danger">Acheter</button>
                 </div>
-                </div>
             </div>
-                </div>
-            </div>
+        </div>
+    </div>
+</div>
 
         
 

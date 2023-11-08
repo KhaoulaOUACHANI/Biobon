@@ -24,5 +24,5 @@ require_once __DIR__ . "/navbar.php";
         <script src="js/main.js"></script>
     </head>
 
-    <body>
+    <body class= 'mt-5 pt-5 text-center'>
         
