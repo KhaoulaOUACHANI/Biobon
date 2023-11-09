@@ -9,7 +9,7 @@ if (!isset($_SESSION['userInfos'])) {
 }
 ?>
 
-<main class="prose mx-auto">
+<main class="prose mx-auto mt-5">
     <h1>Profil</h1>
     <div class="row">
   <div class="col-sm-6 mb-3 mb-sm-0">

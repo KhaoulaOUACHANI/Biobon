@@ -16,7 +16,7 @@ require_once 'product_details_back.php'
                     <h5 class="card-title"><?php echo $produitbyId['nom_produit']?></h5>
                     <p class="card-text"><?php echo $produitbyId['description_produit']?></p>
                     <p class="card-text"><small class="text-body-secondary"><?php echo $produitbyId['prix']?></small></p>
-                    <button type="button" class="btn btn-outline-danger">Acheter</button>
+                    <a type="button" class="btn btn-outline-danger" href="panier/addpanier.php?id=<?php echo $product['id_produit']; ?>">Acheter</a>
                 </div>
             </div>
         </div>

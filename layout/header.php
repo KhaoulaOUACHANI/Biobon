@@ -1,5 +1,6 @@
-<?php session_start(); 
-require_once __DIR__ . "/navbar.php";
+<?php
+require_once __DIR__ ."/_header.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -24,5 +25,5 @@ require_once __DIR__ . "/navbar.php";
         <script src="js/main.js"></script>
     </head>
 
-    <body class= 'mt-5 pt-5 text-center'>
+    <body class= ' text-center'>
         

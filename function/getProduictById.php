@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ ."/getConnection.php";
 function getProductById($productId) {
     $pdo = getConnection();
     $stmt = $pdo->prepare("SELECT * FROM Produits WHERE id_produit = :productId");

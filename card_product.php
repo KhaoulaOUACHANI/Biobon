@@ -11,6 +11,7 @@ require_once 'functions.php';
         
             <!-- <p><?php echo $product['description_produit']; ?></p> -->
             <span class="price fw-bold"><?php echo $product['prix']; ?>€</span>
-            <button type="button" class="btn btn-outline-danger">Acheter</button>
+            <a type="button" class="btn btn-outline-danger" href="panier/addpanier.php?id=<?php echo $product['id_produit']; ?>">Acheter</a>
         
     </div>
+    

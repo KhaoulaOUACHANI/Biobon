@@ -1,10 +1,11 @@
 <?php 
     require_once __DIR__ ."/layout/header.php";
     require_once __DIR__ . '/function/getConnection.php';
+    require_once __DIR__ .'/functions.php';
 
-    $pdo = getConnection();?>
-
-
+    $pdo = getConnection();
+    $products = getAllProducts();
+?>
         
     <div class="image">
         <header> 
@@ -52,8 +53,8 @@
                                 <img src="img/Image-couple.png" width="636px" class="img-fluid" alt="">
                             </div>
                         </div>
-                        <div class="col-lg-6 border "> 
-                            <div class="border ">
+                        <div class="col-lg-6  align-self-center"> 
+                            <div>
                                 <h2>Qui sommes nous ?</h2>
                                 <p>Bienvenue chez Biobon, où la douceur rencontre la durabilité. Nous sommes Ana et Alex, un couple passionné qui a créé Biobon pour offrir des bonbons bio délicieux, exempts d'ingrédients artificiels, tout en préservant notre planète. Chez Biobon, nous sommes déterminés à vous proposer des douceurs savoureuses et éthiques, fabriquées à partir d'ingrédients biologiques et emballées de manière respectueuse de l'environnement. Rejoignez-nous pour une expérience sucrée qui fait du bien à votre palais et à la Terre.</p>
                             </div>
@@ -76,15 +77,36 @@
                         </div>
                         <div class="col-lg-6"> 
                             <div class="">
-                                <h3>Notre</h3>
-                                <h2>Philosophie</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit a modi odio sint soluta id consequuntur alias, fuga itaque eum quis cumque sit. Ex officiis quasi aspernatur <br> <br>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae eaque tempora vero totam doloremque facilis dolores facere harum voluptatibus commodi, omnis sit earum vel fuga reprehenderit officia autem. Ipsa, id.</p>
-                                
-                                <p class="gras mb-4"> We try to do our best to help you and provide with a high-quality services.</p>
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active" data-bs-interval="10000">
+                                    
+                                    <a href="product_details.php?id=<?php echo $produit->getImage(); ?>">
+                                        <img class="img-fluid" src="<?php echo $product['image_produit']; ?>" alt="<?php echo $product['nom_produit']; ?>">
+                                    </a>
+                                        <h3><?php echo $product['nom_produit']; ?></h3>
+                                    
+                                        <!-- <p><?php echo $product['description_produit']; ?></p> -->
+                                        <span class="price fw-bold"><?php echo $product['prix']; ?>€</span>
+                                        <button type="button" class="btn btn-outline-danger">Acheter</button>
 
-                                <a class="btn" href="">En savoir plus</a>
-
+                                    
+                                    <div class="carousel-item" data-bs-interval="2000">
+                                    <img src="..." class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="..." class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
                             </div>
                         </div>
                     </div>
