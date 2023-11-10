@@ -1,13 +1,27 @@
+
 <?php
+// Dans addpanier.php
+session_start();
+require_once __DIR__ ."/function/getProduictById.php";
 
-
-$_SESSION['connected'] = false;
-
-if(isset($_SESSION['utilisateur_connecte'])) {
-    
-    echo "Contenu du panier ici";
-} else {
-    
-    echo "Connectez-vous pour accéder à votre panier.<br>";
-    echo "<a href='page_de_connexion.php'>Se connecter</a>";
+if (!isset($_SESSION['panier'])) {
+    $_SESSION['panier'] = array();
 }
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['product_id'])) {
+    $productId = $_POST['product_id'];
+
+    $productDetails = getProductById($productId);
+
+
+
+    if ($productDetails) {
+        // Ajoutez le produit au panier
+        $_SESSION['panier'][] = $productDetails;
+
+        // Redirigez l'utilisateur vers la page boutique ou une autre page après l'ajout au panier
+        header('Location: addpanier.php');
+        exit;
+    }
+}
+?>

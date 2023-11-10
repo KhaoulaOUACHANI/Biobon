@@ -40,6 +40,6 @@ if (!isset ($_POST)) {
         'id'    => $rep['id'],
         'email' => $email 
     ];
-    Utils::redirect('profile.php');
+    Utils::redirect('../panier/addpanier.php');
 
 ?>

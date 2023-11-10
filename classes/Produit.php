@@ -39,7 +39,7 @@ class Produit
     {
         return $this->prix;
     }
-    public function setPrix(string $prix): self
+    public function setPrix(int $prix): self
     {
         $this->prix = $prix;
         return $this;
