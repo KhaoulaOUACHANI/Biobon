@@ -14,6 +14,7 @@ class AppError
     public const NAME_EMPTY = 10;
     public const LAST_NAME_EMPTY = 11;
     public const LOGIN_CONNECTION = 12;
+    public const PANIER_EMPTY = 13;
 
 
 }

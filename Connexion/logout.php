@@ -1,8 +1,8 @@
 <?php
+require_once '../layout/_header.php';
+require_once '../classes/Utils.php';
 
-require_once 'classes/Utils.php';
 
-session_start();
 $_SESSION = [];
 session_destroy();
 

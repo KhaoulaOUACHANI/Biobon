@@ -17,6 +17,7 @@ function getErrorMessage(int $errorCode): string
         AppError::NAME_EMPTY => "Le nom est obligtoire",
         AppError::LAST_NAME_EMPTY => "Le prénom est obligtoire",
         AppError::LOGIN_CONNECTION => "Vous devez être identifié pour accéder à cette page",
+        AppError::PANIER_EMPTY => "Votre panier est vide",
         default => "Une erreur est survenue"
         
     };

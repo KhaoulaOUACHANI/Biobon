@@ -55,7 +55,7 @@ ob_start(); // Commence la mémoire tampon
                         </li>
                         <?php if (isset($_SESSION['user_info'])) { ?>
                         <li class="nav-item hover-underline-animation ms-5 mt-1">
-                            <a class="nav-link panier " href="panier/addpanier.php" ><i class="fa-solid fa-power-off" style="color: #000000;"></i></a>
+                            <a class="nav-link panier " href="connexion/logout.php" ><i class="fa-solid fa-power-off" style="color: #000000;"></i></a>
                         </li>
                         <?php } ?>
                     </ul>                   

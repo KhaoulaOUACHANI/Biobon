@@ -3,9 +3,10 @@
     require_once __DIR__ . '/function/getConnection.php';
     require_once __DIR__ .'/functions.php';
     require_once __DIR__ .'/classes/Produit.php';
+    require_once __DIR__ .'/function/getProductById.php';
 
     $pdo = getConnection();
-    $products = getAllProducts();
+    $produitbyId = getProductById("id");
     // $product = new Produit();
 ?>
         
@@ -19,7 +20,6 @@
         <main>
         
         <section class="mt-5 pt-5">
-            <!-- LE NOM DE MA SECTION EN COMMENTAIRE -->
             <div class="container justify-content-center"> <!-- container si je touche pas les bords pas de container si je touche les bords)-->
                 
                 <div class="row "> <!-- ça aligne -->
@@ -83,13 +83,12 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active" data-bs-interval="10000">
                                     
-                                    <a href="product_details.php?id=<?php echo $produit->getImage(); ?>">
-                                        <img class="img-fluid" src="<?php echo $product['image_produit']; ?>" alt="<?php echo $product['nom_produit']; ?>">
+                                    <a href="<?php echo $produitbyId['image_produit']?>">
+                                        <img class="img-fluid" src="<?php echo $productById['image_produit']; ?>" alt="<?php echo $productById['nom_produit']; ?>">
                                     </a>
-                                        <h3><?php echo $product['nom_produit']; ?></h3>
+                                        <h3><?php echo $productById['nom_produit']; ?></h3>
                                     
-                                        <!-- <p><?php echo $product['description_produit']; ?></p> -->
-                                        <span class="price fw-bold"><?php echo $product['prix']; ?>€</span>
+                                        <span class="price fw-bold"><?php echo $productById['prix']; ?>€</span>
                                         <button type="button" class="btn btn-outline-danger">Acheter</button>
 
                                     
