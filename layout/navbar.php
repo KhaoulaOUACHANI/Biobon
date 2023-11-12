@@ -13,7 +13,7 @@ ob_start(); // Commence la mémoire tampon
                                 <a class="nav-link" aria-current="page" href="index.php">Accueil</a>
                             </li>
                             <li class="nav-item hover-underline-animation me-3">
-                                <a class="nav-link" href="#">À Propos</a>
+                                <a class="nav-link" href="a_propos.php">À Propos</a>
                             </li>
                             <li class="nav-item hover-underline-animation me-3">
                                 <a class="nav-link" href="products.php">Produits</a>

@@ -2,7 +2,6 @@
 <?php 
 require_once __DIR__ ."/../layout/header.php";
 require_once __DIR__ ."/../function/getErrorMessage.php";
-
 ?>
 <div class="row mt-5 pt-5 pb-5 mb-5">
   <h1 class="text-center">Connexion</h1>

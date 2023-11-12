@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . "/../function/Redirection.php";
+require_once __DIR__ . "/../classes/Utils.php";
 require_once __DIR__ . '/../function/getConnection.php';
 require_once __DIR__ . "/../classes/Utils.php";
 require_once __DIR__ . "/../classes/AppError.php";
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $req->execute(array(':last_name' => $last_name, ':name' => $name, ':email' => $email, ':password' => $hashedPassword));
 
         // Inscription réussie, rediriger 
-        Utils::redirect('/connexion/login.php');
+        Utils::redirect('../connexion/login.php');
     }
 
 }

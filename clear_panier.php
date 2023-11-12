@@ -1,7 +1,7 @@
 <div class="pb-5 mb-5"></div>
 <?php
 require_once __DIR__ . "/layout/_header.php";
-require_once __DIR__ . "/function/getProduictById.php";
+require_once __DIR__ . "/function/getProductById.php";
 require_once __DIR__ . "/classes/Utils.php";
 
 if (isset($_GET['id'])) {

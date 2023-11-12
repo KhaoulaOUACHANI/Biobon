@@ -1,6 +1,6 @@
 <?php
 require_once 'layout/header.php'; 
-require_once 'function/getProduictById.php';
+require_once 'function/getProductById.php';
 require_once 'functions.php';
 
 $products = getAllProducts();
@@ -12,7 +12,7 @@ $products = getAllProducts();
         <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
         <form class="d-flex" role="search" action="search_results.php" method="get">
-        <input class="form-control me-2" type="search" placeholder="Entrez votre..." aria-label="Search">
+        <input class="form-control me-2" type="search" placeholder="Entrez votre..." aria-label="Search" name="search">
         <button class="btn btn-outline-danger" type="submit">...Recherche</button>
         </form>
     </div>

@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . "/../layout/header.php";
 require_once __DIR__ . '/../function/getConnection.php';
 require_once __DIR__ . "/../classes/Utils.php";
 require_once __DIR__ . "/../classes/AppError.php";
