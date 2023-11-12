@@ -1,3 +1,6 @@
+<?php
+ob_start(); // Commence la mémoire tampon
+?>
 
 <!--navbar-->
 <nav class="navbar navbar-expand-lg fixed-top p-3 mb-5 rounded text-dark">
@@ -34,7 +37,7 @@
                                 </svg></a>
                         </li>
                         <li class="nav-item hover-underline-animation me-5">
-                            <a class="nav-link connexion" href="connexion/login.php"><svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <a class="nav-link connexion" href="connexion/login.php"><svg width="35" height="27" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <rect width="35" height="34" fill="url(#pattern0)"/>
                                 <defs>
                                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -46,10 +49,15 @@
                             </a>
                         </li>
                         <li class="nav-item hover-underline-animation ">
-                            <a class="nav-link panier " href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                            <a class="nav-link panier " href="panier/addpanier.php"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
                                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                                 </svg></a>
                         </li>
+                        <?php if (isset($_SESSION['user_info'])) { ?>
+                        <li class="nav-item hover-underline-animation ms-5 mt-1">
+                            <a class="nav-link panier " href="panier/addpanier.php" ><i class="fa-solid fa-power-off" style="color: #000000;"></i></a>
+                        </li>
+                        <?php } ?>
                     </ul>                   
                 
                     <!--droite-->
@@ -57,3 +65,4 @@
             </div>
 
 </nav>
+
