@@ -23,7 +23,7 @@ require_once __DIR__ ."/../function/getErrorMessage.php";
     <input type="password" class="form-control mt-3 mb-3" id="password" name="password" placeholder="Mot de passe" required>
     
     <label for="confirmedpassword" class="form-label" >Confirmer votre mot de passe</label>
-    <input type="confirmedpassword" class="form-control mt-3 mb-3" id="confirmedpassword"  name="confirmedpassword" placeholder="Confirmer votre mot de passe" required>
+    <input type="password" class="form-control mt-3 mb-3" id="confirmedpassword"  name="confirmedpassword" placeholder="Confirmer votre mot de passe" required>
   </div>
   <div class="row"> 
       <div class="col-3"></div>

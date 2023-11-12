@@ -6,9 +6,9 @@
     </div>
     
     <img class="vw-100 opacity-75 mt-4" src="img/a_propos_img.png" alt="" >
-    <div class="container col-lg-6">
+    <div class="container col-lg-6 mt-3">
         
-            <h2 class="mb-3 ">Qui sommes nous</h2> 
+
             <p>
             Bienvenue chez Biobon, là où la douceur rencontre la durabilité. Notre histoire commence avec un amour partagé pour les bonbons et une passion pour un mode de vie sain et respectueux de l'environnement. Nous sommes Ana et Alex, un couple enthousiaste qui a décidé de créer Biobon pour offrir une expérience sucrée et éthique à tous les amoureux de bonbons.
 

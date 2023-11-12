@@ -1,7 +1,7 @@
 <?php
 require_once 'layout/header.php'; 
 require_once 'functions.php';
-require_once 'function/getProduictById.php';
+require_once 'function/getProductById.php';
 require_once 'product_details_back.php'
 ?>
 

@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . "/../function/Redirection.php";
+require_once __DIR__ . "/../classes/Utils.php";
 require_once __DIR__ . '/../function/getConnection.php';
 require_once __DIR__ . "/../classes/Utils.php";
 require_once __DIR__ . "/../classes/AppError.php";
@@ -41,8 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $req = $pdo->prepare("INSERT INTO Utilisateurs (nom, prenom, adresse_mail, mot_de_passe) VALUES (:last_name, :name, :email, :password)");
         $req->execute(array(':last_name' => $last_name, ':name' => $name, ':email' => $email, ':password' => $hashedPassword));
 
-        // Inscription réussie, rediriger 
-        Utils::redirect('/connexion/login.php');
+        // Inscription réussie, redirection page co
+        Utils::redirect('../connexion/login.php');
     }
 
 }

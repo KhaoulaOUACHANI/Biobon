@@ -4,9 +4,10 @@
     require_once __DIR__ .'/functions.php';
     require_once __DIR__ .'/classes/Produit.php';
     require_once __DIR__ .'/data/produits.php';
-    
+    require_once __DIR__ .'/function/getProductById.php';
+
     $pdo = getConnection();
-    $products = getAllProducts();
+    $produitbyId = getProductById("id");
     // $product = new Produit();
 ?>
         
@@ -20,7 +21,6 @@
         <main>
         
         <section class="mt-5 pt-5">
-            <!-- LE NOM DE MA SECTION EN COMMENTAIRE -->
             <div class="container justify-content-center"> <!-- container si je touche pas les bords pas de container si je touche les bords)-->
                 
                 <div class="row "> <!-- ça aligne -->
@@ -82,7 +82,7 @@
                             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <?php foreach ($produit as $product): ?>
-                                    <div class="carousel-item" data-bs-interval="10000">
+                                    <div class="carousel-item active" data-bs-interval="10000">
                                         <a href="product_details.php?id=<?php echo $product->getId(); ?>">
                                             <img class="img-fluid" src="<?php echo $product->getImage(); ?>" alt="<?php echo $product->getNom(); ?>">
                                         </a>

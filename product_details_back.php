@@ -1,7 +1,7 @@
 <?php
 require_once 'layout/header.php'; 
 require_once 'functions.php';
-require_once 'function/getProduictById.php';
+require_once 'function/getProductById.php';
 
 if (!isset($_GET['id'])) {
     http_response_code(404);
