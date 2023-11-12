@@ -3,7 +3,8 @@
     require_once __DIR__ . '/function/getConnection.php';
     require_once __DIR__ .'/functions.php';
     require_once __DIR__ .'/classes/Produit.php';
-
+    require_once __DIR__ .'/data/produits.php';
+    
     $pdo = getConnection();
     $products = getAllProducts();
     // $product = new Produit();
@@ -78,28 +79,19 @@
                             </div>
                         </div>
                         <div class="col-lg-6"> 
-                            <div class="">
                             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active" data-bs-interval="10000">
-                                    
-                                    <a href="product_details.php?id=<?php echo $produit->getImage(); ?>">
-                                        <img class="img-fluid" src="<?php echo $product['image_produit']; ?>" alt="<?php echo $product['nom_produit']; ?>">
-                                    </a>
-                                        <h3><?php echo $product['nom_produit']; ?></h3>
-                                    
-                                        <!-- <p><?php echo $product['description_produit']; ?></p> -->
-                                        <span class="price fw-bold"><?php echo $product['prix']; ?>€</span>
+                            <div class="carousel-inner">
+                                <?php foreach ($produit as $product): ?>
+                                    <div class="carousel-item" data-bs-interval="10000">
+                                        <a href="product_details.php?id=<?php echo $product->getId(); ?>">
+                                            <img class="img-fluid" src="<?php echo $product->getImage(); ?>" alt="<?php echo $product->getNom(); ?>">
+                                        </a>
+                                        <h3><?php echo $product->getNom(); ?></h3>
+                                        <span class="price fw-bold"><?php echo $product->getPrix(); ?>€</span>
                                         <button type="button" class="btn btn-outline-danger">Acheter</button>
+                                    </div>
+                                <?php endforeach; ?>
 
-                                    
-                                    <div class="carousel-item" data-bs-interval="2000">
-                                    <img src="..." class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                    <img src="..." class="d-block w-100" alt="...">
-                                    </div>
-                                </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
@@ -108,7 +100,6 @@
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
                                 </button>
-                                </div>
                             </div>
                         </div>
                     </div>
