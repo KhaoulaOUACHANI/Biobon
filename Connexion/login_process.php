@@ -31,11 +31,11 @@ if (!isset ($_POST)) {
     }
 
     if (empty(!password_verify ($password, $rep['mot_de_passe']))) {
-        //Si les deux sont pas bon rediriger vers login avec message d'erreur
+        //Si les deux mdp sont pas bon rediriger vers login avec message d'erreur
             Utils::redirect('login.php?error='. AppError::PASSWORD_ERROR);
     }
 
-    // Stocker l'id de rep dans le $_SESSION['user_info']['id'] rediriger vers la page profile  
+    // Stocker l'id de rep dans le $_SESSION
     $_SESSION['user_info'] = [
         'id'    => $rep['id'],
         'email' => $email 

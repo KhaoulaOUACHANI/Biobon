@@ -1,5 +1,5 @@
 <?php
-ob_start(); // Commence la mémoire tampon
+ob_start(); // Envoie les entêtes au navigteur en priorité
 ?>
 
 <!--navbar-->

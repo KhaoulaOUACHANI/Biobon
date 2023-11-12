@@ -35,13 +35,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (!empty($email) && !empty($password)) {
-        // Hashage du mot de passe avant de le stocker dans la base de données
+        // Hashage du mot de passe
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         $req = $pdo->prepare("INSERT INTO Utilisateurs (nom, prenom, adresse_mail, mot_de_passe) VALUES (:last_name, :name, :email, :password)");
         $req->execute(array(':last_name' => $last_name, ':name' => $name, ':email' => $email, ':password' => $hashedPassword));
 
-        // Inscription réussie, redirection page co
         Utils::redirect('../connexion/login.php');
     }
 

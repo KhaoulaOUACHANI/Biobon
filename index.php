@@ -3,7 +3,7 @@
     require_once __DIR__ . '/function/getConnection.php';
     require_once __DIR__ .'/functions.php';
     require_once __DIR__ .'/classes/Produit.php';
-    require_once __DIR__ .'/data/produits.php';
+    // require_once __DIR__ .'/data/produits.php';
     require_once __DIR__ .'/function/getProductById.php';
 
     $pdo = getConnection();
@@ -21,20 +21,20 @@
         <main>
         
         <section class="mt-5 pt-5">
-            <div class="container justify-content-center"> <!-- container si je touche pas les bords pas de container si je touche les bords)-->
+            <div class="container justify-content-center">
                 
-                <div class="row "> <!-- ça aligne -->
-                    <div class="col-lg-4 "> <!-- On copie ça le nombre de fois ou on a besoin -->
+                <div class="row ">
+                    <div class="col-lg-4 ">
                         <div class=" mb-3 ">
                             <img src="img/image_gauche.png"  class="img-fluid " alt="">
                         </div>
                     </div>
-                    <div class="col-lg-4"> <!-- On copie ça le nombre de fois ou on a besoin -->
+                    <div class="col-lg-4">
                         <div class=" mb-3">
                             <img src="img/Image_centre.png"  class="img-fluid" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-4"> <!-- On copie ça le nombre de fois ou on a besoin -->
+                    <div class="col-lg-4">
                         <div class=" mb-3">
                             <img src="img/Image_droite.png"  class="img-fluid" alt="">
                         </div>
@@ -49,7 +49,7 @@
             <section>
                 <div class="container  mt-5">
 
-                    <div class="row "> <!-- ça aligne -->
+                    <div class="row "> 
 
                         <div class="col-lg-6"> 
                             <div class="mb-3">
@@ -68,10 +68,10 @@
             </section>
 
 
-            <section class="image pb-5 pt-4 mt-5"><!-- notre philosophie section 3 -->
+            <section class="image pb-5 pt-4 mt-5">
                 <div class="container  mt-5 mb-5 ">
 
-                    <div class="row "> <!-- ça aligne -->
+                    <div class="row "> <!-- A faire -->
 
                         <div class="col-lg-6"> 
                             <div class="mb-3 ">
@@ -88,6 +88,15 @@
                                         </a>
                                         <h3><?php echo $product->getNom(); ?></h3>
                                         <span class="price fw-bold"><?php echo $product->getPrix(); ?>€</span>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active" data-bs-interval="10000">
+                                    
+                                    <a href="<?php echo $produitbyId['image_produit']?>">
+                                        <img class="img-fluid" src="<?php echo $productById['image_produit']; ?>" alt="<?php echo $productById['nom_produit']; ?>">
+                                    </a>
+                                        <h3><?php echo $productById['nom_produit']; ?></h3>
+                                    
+                                        <span class="price fw-bold"><?php echo $productById['prix']; ?>€</span>
                                         <button type="button" class="btn btn-outline-danger">Acheter</button>
                                     </div>
                                 <?php endforeach; ?>

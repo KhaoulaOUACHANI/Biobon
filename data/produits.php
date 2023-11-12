@@ -1,7 +1,15 @@
 <?php
+class Produit {
+    private int $id;
+    private  $image;
+    private $nom;
+    private $prix;
 
-$produit = [
-  new Produit(1, "/../img/bonbons.jpeg", "Bonbon Gélifié Fraise", 1.50),
-  new Produit(2, "/../img/bonbons.jpeg", "Oursons en Guimauve", 2.00),
-  new Produit(3, "/../img/bonbons.jpeg", "Dragées au Chocolat Noir", 1.75)
-];
+    public function __construct($id, $image, $nom, $prix) {
+        $this->id = $id;
+        $this->image = $image;
+        $this->nom = $nom;
+        $this->prix = (float) $prix; // Assurez-vous que $prix est traité comme un float
+    }
+
+}

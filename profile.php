@@ -2,6 +2,8 @@
 require_once 'classes/Utils.php';
 require_once 'layout/header.php';
 
+// Pas traiter, à finir 
+
 if (!isset($_SESSION['user_info'])) {
     $_SESSION['loginErrorMessage'] = "Vous devez être identifié pour accéder à cette page";
     Utils::redirect("connexion/login.php");

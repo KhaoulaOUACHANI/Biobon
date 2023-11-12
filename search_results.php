@@ -1,7 +1,7 @@
 <?php
 require_once 'layout/header.php'; 
 require_once __DIR__ . "/classes/Utils.php";
-require_once __DIR__ . "/function/getProductByName.php"; // Assurez-vous que le nom du fichier est correct
+require_once __DIR__ . "/function/getProductByName.php";
 
 if (!isset($_GET['search'])) {
     Utils::redirect("panier.php");
@@ -9,7 +9,7 @@ if (!isset($_GET['search'])) {
 
 ['search' => $search] = $_GET;
 
-$product = getProductByName($search); // Assurez-vous que la fonction est adaptée pour rechercher par nom
+$product = getProductByName($search);
 
 if ($product) {
     ?>
