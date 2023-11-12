@@ -1,11 +1,11 @@
-<div class= "image">
+<div class= "image mb-3">
 <?php 
 require_once __DIR__ ."/../layout/header.php";
 require_once __DIR__ ."/../function/getErrorMessage.php";
 ?>
 
 
-<div class="row pt-2  ">
+<div class="row pb-5 mb-5">
   <div class="col-3 "></div>
 <form method="POST" action="inscription/subscribe_process.php" class="col-6 ">
   <div class="mb-3 mt-5 " >
